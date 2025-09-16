@@ -1,0 +1,21 @@
+body{   
+
+    background: linear-gradient(153deg, #FFC943 , #FE830E 50%, #F24822 100%);
+    aspect-ratio: 1 / 1;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0rem;
+    padding: 0rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+.top-left, .top-mid, .top-right{
+    opacity: 75%;
+    background-color: white;
+    border-bottom: black;
+    margin: 1rem;
+    padding: .2rem;
+    border-radius: .5rem;
+}
