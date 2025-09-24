@@ -8,3 +8,12 @@ hamMenu.addEventListener('click', () => {
     offScreenMenu.classList.toggle('active');
 })
 
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.querySelector(".dropdown-toggle");
+  const midMenu = document.querySelector(".mid-menu");
+
+  toggleBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    midMenu.classList.toggle("active");
+  });
+});
