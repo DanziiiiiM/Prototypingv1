@@ -17,3 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
     midMenu.classList.toggle("active");
   });
 });
+const booknu = document.getElementById("book-nu");
+
+booknu.addEventListener("click", function () {
+  alert('BOOKET');
+});
+  
