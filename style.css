@@ -1,5 +1,5 @@
 
-body{   /*Denne del gør så baggrund har en gradient. samtidig med, hvor meget den skal fylde samt, hvilken aspect-ratio som tilpasser den til en mobil font family gør så det Helvetica*/
+body{   /*Giver baggrunden en gradient, definerer højde/bredde og sætter font til Helvetica*/
     margin: 0 ;
     background: linear-gradient(153deg, #E3F2FD, #6C7A4F 50%, #9C6B3B 100%);
     min-height: 100vh;
@@ -40,37 +40,39 @@ color: rgb(3, 59, 3);
 hr{
     border-bottom: black 1px solid;
 }
-/*Dette element laver selve hamburger menuen med hvilken baggrunden samtidig med at gå ind og sige, hvilken højde og længde dem skal have ved samtidig, flex-direction gør så de er sat op i column istedet for rækker. */
+/*Definerer hamburger-menuens container med bredde, højde og kolonne-layout */
 .off-screen-menu {
-
     height: 100vh;
-    width: 100%;
-    max-width: 450px;
+    width: 110%;
+    max-width: 500px;
     position: fixed;
-    top: 1em;
-    left: -450px;
+    top: .5em;
+    left: -500px;
     flex-direction: column;
-    justify-content: left;
     font-size: 1.5rem;
     font-family: Helvetica;
     transition: 3.s ease;
+    z-index: 9999;
 }
 /*Gør så den starter fra venstre side når menuen bliver åbent */
 .off-screen-menu.active{
     left: 0;
+    z-index: 9999;
 
 }
-/*Dette elemtent går ind og sætter vores hamburger menu og logo så det står på linje*/
+/*Sætter hamburger-menu og logo på linje ved hjælp af flexbox*/
 .top-menu-placement{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 1em;
+     z-index: 9999;
 }
 /*Dette element givet en lille afstand fra siden af og ind samt når der brgues display flex så kommer det i flex box mod.  */
 nav{
     padding: .01rem;
     display: flex;
+     z-index: 9999;
 } 
 /*Dette element er den hamburger menu som kan ses på siden som man kan trykke på*/
 .ham-menu {
@@ -98,7 +100,7 @@ nav{
 }/*Den nederste linje flyttes også til midten bliver den ene skrå streg i et x*/
 .ham-menu span:nth-child(3){
     top: 75%;
-}/*ette som dette element gør er at flytte den øverest linje ned som den gå henover midten*/
+}/*Dette som dette element gør er at flytte den øverest linje ned som den gå henover midten*/
 .ham-menu.active span:nth-child(1){
     top: 50%;
     transform: translate(-50%, -50%) rotate(45deg); 
@@ -116,7 +118,6 @@ nav{
     list-style: none;
     padding: 2rem;
     padding-left: .8em;
-    padding-right: .8em;
     position: relative;
     top: 2.5rem;
     right: 2.5rem;
@@ -189,6 +190,8 @@ body, .nb1-picture, .nb2-picture, .nb3-picture {
     padding: 0;
     margin: 0;
 }
+
+/*Dette ændre på de billeder som er på destinations siden*/
 .nb1-picture, .nb2-picture, .nb3-picture {
       margin: auto; 
       display: block; 
@@ -196,19 +199,22 @@ body, .nb1-picture, .nb2-picture, .nb3-picture {
       border-radius: 15px;
 
 }
+/*Denne ændre på knappen som er ved billederne på destinationssiden*/
 .pictures button{
     margin: auto; 
     display: block;  
-
+    
 }
-
+/*Denne ændre brødteksten under billederne på destinationssiden */
 .billede-tekst {
     font-size: 14px;
     line-height: 1.6;
     margin-left:40px;
     margin-right:40px;
+    color: white;
+    text-shadow: 2px 2px rgb(0, 0, 0);
 }
-
+/*Dette er titel i toppen af siden*/
 .destination-side
 {
  font-size:25px;
@@ -216,6 +222,101 @@ body, .nb1-picture, .nb2-picture, .nb3-picture {
   margin: auto;
   display: block;
   text-align: center;
-    stroke: hotpink;
+    color: rgb(0, 214, 29);
+    text-shadow: 2px 2px rgb(0, 0, 0);
+}
+#book-nu{
+    display: block;
+    margin: 20px auto; /* ← auto i siden = centreret */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #415f48;
     color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+
+/*Dette stykke er for karusellen på de forskellige destinations sider */
+* {box-sizing:border-box}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Skjuler alle slides som standard */
+.mineSlides {
+  display: none;
+}
+
+/* Knap til næste og forrige billede i slideshowet */
+.forrig, .neste {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* giver knappen positionen til højre */
+.neste {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Når man har musen over kommer der en sort baggrund */
+.forrig:hover, .neste:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Her kan man ændre på caption teksten som er på billede */
+.tekst {
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  font-weight: bold;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+    text-shadow: 3px 3px 6px black;
+}
+
+/* Number tekst (1/3 osv) */
+.numbertekst {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* Højde på billederne i slideshowet */
+.mineSlides img{
+    height: 200px;
 }

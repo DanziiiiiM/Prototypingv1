@@ -52,14 +52,45 @@
     </div>
     </div>
 
-    <h1 class="destination-side">Destinationer</h1>
-        <div class="pictures">
-            <img class="nb1-picture" src="img\strand.jpg" alt="">
+       <h1 class="destination-side">Destinationer</h1>
+ <!-- Slideshow container -->
+<div class="slideshow-container">
 
+  <!-- Full-width images with number and caption text -->
+  <div class="mineSlides fade">
+    <div class="numbertekst">1 / 3</div>
+    <img src="bornholm\b1.jpg" style="width:100%">
+    <div class="tekst">HAMMERHUS</div>
+  </div>
+
+  <div class="mineSlides fade">
+    <div class="numbertekst">2 / 3</div>
+    <img src="bornholm\b2.jpg" style="width:100%", height="">
+    <div class="tekst">RUBINSØEN</div>
+  </div>
+
+  <div class="mineSlides fade">
+    <div class="numbertekst">3 / 3</div>
+    <img src="bornholm\b3.jpg" style="width:100%">
+    <div class="tekst">NATUR</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="forrig" onclick="opSlides(-1)">&#10094;</a>
+  <a class="neste" onclick="opSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="nuSlide(1)"></span>
+  <span class="dot" onclick="nuSlide(2)"></span>
+  <span class="dot" onclick="nuSlide(3)"></span>
+</div>
         
             <p class="billede-tekst">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sit obcaecati tempora inventore fuga reiciendis dicta, distinctio minima voluptatem modi.
             <a href="#"target="_self" title="Dette link tager dig til vores side om #">Læs mere her</a></p>
-            <button class="book-nu">BOOK NU</button>
+            <button id="book-nu">BOOK NU</button>
             <hr>
             
            
