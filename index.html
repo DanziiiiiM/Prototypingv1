@@ -54,10 +54,34 @@
     </div>
         <div>
         </div>
-
-        <H1>VELKOMMEN TIL</H1>
+       
+        <H1 class="forside">VELKOMMEN TIL</H1>
         <P class="billede-tekst"">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum saepe deleniti excepturi vitae aperiam et hic ullam, perferendis, dolorem commodi labore maxime mollitia ipsa a culpa est beatae ab nostrum.</P>
-    <script src="script.js"></script>
+        <form class="bookingterminal">
+  <div class="bookingterminal1">
+    <label for="destination">Hvor skal du hen?</label>
+    <input type="text" id="destination" name="destination" placeholder="Indtast destination">
+  </div>
+
+  <div class="bookingterminal2">
+         <label for="checkin">Fra / til hvornår</label>
+             <div style="display:flex; gap:5px;">
+             <input type="date" id="checkin" name="checkin">
+                <span>—</span>
+                 <input type="date" id="checkout" name="checkout">
+                </div>
+                </div>
+
+                <div class="bookingterminal3">
+                <label for="guests">Hvor mange</label>
+                <input type="number" id="guests" name="guests" min="1" value="2">
+                <button type="submit">Søg</button>
+             </div>
+
+            
+        </form>
+
+        <script src="script.js"></script>
     
   
     
