@@ -7,7 +7,7 @@
      
     <title>Grønferie.dk</title>
 </head>
-<body>
+<body class="forside">
     
      
 
@@ -20,7 +20,7 @@
                     <button class="dropdown-toggle"></button>
                        
                      <ul class="sub-menu">
-                        <hr>
+                        <hr class="forside">
                                  <ul>
                             
                      <li class="top-des"><a href="strand.html">Blåvandhuk </a></li>
@@ -54,34 +54,92 @@
     </div>
         <div>
         </div>
-       
-        <H1 class="forside">VELKOMMEN TIL</H1>
-        <P class="billede-tekst"">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum saepe deleniti excepturi vitae aperiam et hic ullam, perferendis, dolorem commodi labore maxime mollitia ipsa a culpa est beatae ab nostrum.</P>
-        <form class="bookingterminal">
-  <div class="bookingterminal1">
-    <label for="destination">Hvor skal du hen?</label>
-    <input type="text" id="destination" name="destination" placeholder="Indtast destination">
+      <div class="slideshow-container">
+    
+    <div class="forsidetekst">
+      <hr class="forsidehr">
+      <h1>Velkommen til GrønFerie</h1>
+      <p>Dansk booking platform med fokus på bæredygtighed</p>
+      <p>Tag på ferie indlands uden at gå på kompromis med ferieoplevelsen</p>
+        <p></p>
+      <h2>Destinationer</h2>
+    </div>
+
+    
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mineSlides fade">
+    <a href="strand.html" target="_self" title="Dette link tager dig til vores side om #">
+      <img src="blaavandshug\billede3.jpg" style="width:100%">
+      <div class="tekst">BLÅVANDHUK</div>
+    </a>
+    <!-- Pile inde i slides -->
+    <a class="forrig" onclick="opSlides(-1)">&#10094;</a>
+    <a class="neste" onclick="opSlides(1)">&#10095;</a>
   </div>
 
-  <div class="bookingterminal2">
-         <label for="checkin">Fra / til hvornår</label>
-             <div style="display:flex; gap:5px;">
-             <input type="date" id="checkin" name="checkin">
-                <span>—</span>
-                 <input type="date" id="checkout" name="checkout">
-                </div>
-                </div>
+  <div class="mineSlides fade">
+    <a href="bornholm.html" target="_self" title="Dette link tager dig til vores side om #">
+      <img src="bornholm\b1.jpg" style="width:100%">
+      <div class="tekst">BORNHOLM</div>
+    </a>
+    <!-- Pile inde i slides -->
+    <a class="forrig" onclick="opSlides(-1)">&#10094;</a>
+    <a class="neste" onclick="opSlides(1)">&#10095;</a>
+  </div>
 
-                <div class="bookingterminal3">
-                <label for="guests">Hvor mange</label>
-                <input type="number" id="guests" name="guests" min="1" value="2">
-                <button type="submit">Søg</button>
-             </div>
+  <div class="mineSlides fade">
+    <a href="skagen.html" target="_self" title="Dette link tager dig til vores side om #">
+      <img src="skagen\s3.jpg" style="width:100%">
+      <div class="tekst">SKAGEN</div>
+    </a>
+    <!-- Pile inde i slides -->
+    <a class="forrig" onclick="opSlides(-1)">&#10094;</a>
+    <a class="neste" onclick="opSlides(1)">&#10095;</a>
+  </div>
 
-            
-        </form>
+  <div class="mineSlides fade">
+    <a href="strand.html" target="_self" title="Dette link tager dig til vores side om #">
+      <img src="img\klit.jpg" style="width:100%">
+      <div class="tekst">MØNS KLINT</div>
+    </a>
+    <!-- Pile inde i slides -->
+    <a class="forrig" onclick="opSlides(-1)">&#10094;</a>
+    <a class="neste" onclick="opSlides(1)">&#10095;</a>
+  </div>
+
+</div>
+  
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="nuSlide(1)"></span>
+  <span class="dot" onclick="nuSlide(2)"></span>
+  <span class="dot" onclick="nuSlide(3)"></span>
+  <span class="dot" onclick="nuSlide(4)"></span>
+</div>
+<div>
+        <p class="billede-tekst">Oplev Danmark på en ny måde - tæt på natur, kultur og hinanden </p>
+          <p class="billede-tekst">Hver destination byder på unikke naturoplevelser, lokale smagsindtryk og grønne alternativer til ferien i udlandet</p>
+           
+          <a href="Destination_side.html"target="_self" title="Dette link tager dig til vores side om #">
+          <button class="læs-mere">Læs mere om vores Destinationer</button>
+          </a>
+            <hr class="forside">
+
+</div>
 
         <script src="script.js"></script>
+
+<div class="forsidetekst">
+        <h3> GrønFeries budskab </h3>
+        <p> Vi går op i grøn energi bla.bla.bla.bla</p>
+
+        <a href="Om_os.html"target="_self" title="Dette link tager dig til vores side om #">
+          <button class="læs-mere">Læs mere om os</button>
+
+</div>
     
   
     

@@ -1,7 +1,7 @@
 
 body{   /*Giver baggrunden en gradient, definerer højde/bredde og sætter font til Helvetica*/
     margin: 0 ;
-    background: linear-gradient(153deg, #E3F2FD, #6C7A4F 50%, #9C6B3B 100%);
+    background: linear-gradient(153deg, rgb(162, 192, 187), #6C7A4F 50%, #9C6B3B 100%);
     min-height: 100vh;
     width: 100%;
     aspect-ratio: 9 / 16;
@@ -14,11 +14,16 @@ body p{
 body.destination{
     height: 1500px;
 }
+body.forside{
+    height: 1200px;
+}
 /* Dette element gør så links til andre sider har farven hvid.  */
 a { 
     text-decoration: none;
     color: white; 
 }
+
+
 
 /*Element gør så logoet er 60px højt*/
 .logo {
@@ -27,6 +32,7 @@ a {
 
 /*Om os siden*/
 .om-os{
+  font-size:16px;
 color: rgb(218, 218, 218);
     text-shadow: 2px 2px black;
 }
@@ -38,9 +44,19 @@ color: rgb(218, 218, 218);
 .om-os p {
     margin-bottom: 15px;
 }
-hr{
+.forside hr{
     border-bottom: black 1px solid;
 }
+
+.destination hr{
+   border-bottom: black 1px solid
+}
+
+.topafside {
+  width: 80%;
+  border-bottom: 1px solid black;
+}
+
 /*Definerer hamburger-menuens container med bredde, højde og kolonne-layout */
 .off-screen-menu {
     height: 100vh;
@@ -171,7 +187,7 @@ nav{
 
 /* Når dropdown er i bbrug så peger piler op af */
 .mid-menu.active .dropdown-toggle::after {
-  content: "<";
+  content: "❮";
   display: inline-block;
   transform: rotate(90deg);
   color: white;
@@ -179,14 +195,15 @@ nav{
 
 /* Når dropdown ikke er brug så laver den en pil ned af  */
 .dropdown-toggle::after {
-   content: "<";
+   content: "❯";
   display: inline-block;
-  transform: rotate(-90deg);
+  transform: rotate(90deg);
   color: white;
 }
 ul{
     color: white;
 }
+
 body, .nb1-picture, .nb2-picture, .nb3-picture {
     padding: 0;
     margin: 0;
@@ -197,7 +214,6 @@ body, .nb1-picture, .nb2-picture, .nb3-picture {
       margin: auto; 
       display: block; 
       max-width: 370px;
-      border-radius: 15px;
 
 }
 /*Denne ændre på knappen som er ved billederne på destinationssiden*/
@@ -206,15 +222,43 @@ body, .nb1-picture, .nb2-picture, .nb3-picture {
     display: block;  
     
 }
+.forsidetekst h1
+ {  font-size: 24px;
+    font-family: Helvetica, sans-serif;
+    text-decoration: none;
+    color: white; 
+    text-shadow: 2px 2px black;
+   
+ }
+
+ .forsidetekst {
+font-size: 16px;
+  font-family: Helvetica, sans-serif;
+    text-decoration: none;
+    color: white; 
+text-shadow: 2px 2px black;
+line-height: 1.6;
+   margin: 0 auto; 
+    padding: 0 40px; 
+    max-width: 800px; 
+    text-align: center;
+ }
 /*Denne ændre brødteksten under billederne på destinationssiden */
 .billede-tekst {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.6;
     margin-left:40px;
     margin-right:40px;
     color: white;
     text-shadow: 2px 2px rgb(0, 0, 0);
 }
+#links {
+  color: #0000EE;
+  font-size: 24px;
+  text-shadow: none;
+  border-bottom: .5px solid black;
+}
+
 /*Dette er titel i toppen af siden*/
 .destination-side
 {
@@ -223,7 +267,7 @@ body, .nb1-picture, .nb2-picture, .nb3-picture {
   margin: auto;
   display: block;
   text-align: center;
-    color: rgb(0, 214, 29);
+    color: rgb(255, 255, 255);
     text-shadow: 2px 2px rgb(0, 0, 0);
 }
 #book-nu{
@@ -238,6 +282,19 @@ body, .nb1-picture, .nb2-picture, .nb3-picture {
     cursor: pointer;
 
 }
+.læs-mere {
+display: block;
+    margin: 20px auto; /* ← auto i siden = centreret */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #415f48;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
 
 
 /*Dette stykke er for karusellen på de forskellige destinations sider */
@@ -249,12 +306,13 @@ body, .nb1-picture, .nb2-picture, .nb3-picture {
 .slideshow-container {
   max-width: 1000px;
   position: relative;
-  margin: auto;
+  margin: auto; 
 }
 
 /* Skjuler alle slides som standard */
 .mineSlides {
   display: none;
+  position: relative;
 }
 
 /* Knap til næste og forrige billede i slideshowet */
@@ -262,8 +320,8 @@ body, .nb1-picture, .nb2-picture, .nb3-picture {
   cursor: pointer;
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   width: auto;
-  margin-top: -22px;
   padding: 16px;
   color: white;
   font-weight: bold;
@@ -271,6 +329,7 @@ body, .nb1-picture, .nb2-picture, .nb3-picture {
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+  margin: auto;
 }
 
 /* giver knappen positionen til højre */
@@ -278,7 +337,10 @@ body, .nb1-picture, .nb2-picture, .nb3-picture {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
+.forrig {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
 /* Når man har musen over kommer der en sort baggrund */
 .forrig:hover, .neste:hover {
   background-color: rgba(0,0,0,0.8);
@@ -320,34 +382,6 @@ body, .nb1-picture, .nb2-picture, .nb3-picture {
 /* Højde på billederne i slideshowet */
 .mineSlides img{
     height: 200px;
-}
-.bookingterminal{
-background: white;
-flex-direction: row;
 
 }
-.bookingterminal1{
-  border: 1px solid black;
-  padding-bottom: 1px;
-}
-.bookingterminal2{
-  border: 1px solid black;
-  padding-bottom: 1px;
 
-}
-.bookingterminal3{
-  border: 1px solid black;
-  padding-bottom: 1px;
-}
-.bookingterminal button{
-  float: right;
-  padding-right: 2em;
-
-}
-.forside{
-  margin: 0%;
-  padding: 0%;
-  text-align: center;
-  justify-content: center;
-
-}
