@@ -10,31 +10,36 @@
 <body class="forside">
     
      
-
+      <!-- Off-screen hamburger-menu forbliver skjult indtil den trykkes på -->
      <div class="off-screen-menu"> 
         <ul>
+           <!-- Top menu element -->
             <li class="top-menu"><a href="index.html">FORSIDE</a></li>
+            <!-- Midter menu som har dropdown til destinationer -->
                 <li class="mid-menu">
                     <a href="Destination_side.html">DESTINATIONER</a>
-                 
+                     <!-- Dropdown toggle pil -->
                     <button class="dropdown-toggle"></button>
                        
+                    <!-- Undermenu i dropdown -->
                      <ul class="sub-menu">
-                        <hr class="forside">
+                        <hr class="hamline">
                                  <ul>
                             
-                     <li class="top-des"><a href="strand.html">Blåvandhuk </a></li>
-                    <hr> 
+                     <li class="top-des"><a href="strand.html">Blåvand </a></li>
+                    <hr class="hamline">
                     
                      <li class="midt-des"><a href="bornholm.html">Bornholm  </a></li>
-                    <hr>
+                    <hr class="hamline">
                         <li class="bund-des"><a href="skagen.html">Skagen  </a></li>
                         </ul>
                     </ul>
                 </li>
+                <!-- Nederste menupunkt -->
             <li class="low-menu"><a href="Om_os.html">OM OS</a></li>  
         </ul>
     </div>
+    <!-- Topbar: hamburger-menu til venstre, logo i midten -->
     <div class="top-menu-placement">
         <div>
             <nav class="ham-menu">
@@ -44,7 +49,7 @@
         
       
         </nav></div>
-        
+         <!-- Logo -->
         <div>
             <img class="logo" src="img\groengang_logo.png" alt="logo">
         </div>
@@ -57,7 +62,7 @@
       <div class="slideshow-container">
     
     <div class="forsidetekst">
-      <hr class="forsidehr">
+      <hr class="forside-hr">
       <h1>Velkommen til GrønFerie</h1>
       <p>Dansk booking platform med fokus på bæredygtighed</p>
       <p>Tag på ferie indlands uden at gå på kompromis med ferieoplevelsen</p>
@@ -71,7 +76,7 @@
   <div class="mineSlides fade">
     <a href="strand.html" target="_self" title="Dette link tager dig til vores side om #">
       <img src="blaavandshug\billede3.jpg" style="width:100%">
-      <div class="tekst">BLÅVANDHUK</div>
+      <div class="tekst">BLÅVAND</div>
     </a>
     <!-- Pile inde i slides -->
     <a class="forrig" onclick="opSlides(-1)">&#10094;</a>
@@ -112,7 +117,7 @@
   
 <br>
 
-<!-- The dots/circles -->
+<!-- de cirkel som er dots -->
 <div style="text-align:center">
   <span class="dot" onclick="nuSlide(1)"></span>
   <span class="dot" onclick="nuSlide(2)"></span>
@@ -126,7 +131,7 @@
           <a href="Destination_side.html"target="_self" title="Dette link tager dig til vores side om #">
           <button class="læs-mere">Læs mere om vores Destinationer</button>
           </a>
-            <hr class="forside">
+          <br>
 
 </div>
 
@@ -134,7 +139,8 @@
 
 <div class="forsidetekst">
         <h3> GrønFeries budskab </h3>
-        <p> Vi går op i grøn energi bla.bla.bla.bla</p>
+        <p>Vi som virksomhed går op i det bæredygtige valg, vores budskab handler om at reducere klimaaftrykket ved at undgå flyrejser, 
+          og samtidig støtte lokale virksomheder og producenter</p>
 
         <a href="Om_os.html"target="_self" title="Dette link tager dig til vores side om #">
           <button class="læs-mere">Læs mere om os</button>
